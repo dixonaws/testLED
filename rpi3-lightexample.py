@@ -1,19 +1,3 @@
-'''
-/*
- * Copyright 2010-2016 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License").
- * You may not use this file except in compliance with the License.
- * A copy of the License is located at
- *
- *  http://aws.amazon.com/apache2.0
- *
- * or in the "license" file accompanying this file. This file is distributed
- * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
- * express or implied. See the License for the specific language governing
- * permissions and limitations under the License.
- */
- '''
 
 '''
 This is a complete device shadow document for thing "rpi3"
@@ -24,7 +8,7 @@ This is a complete device shadow document for thing "rpi3"
         "greenlight": "on"
   }
 }
- '''
+'''
 
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTShadowClient
 import sys
@@ -49,32 +33,36 @@ class shadowCallbackContainer:
         print(payload)
 
         # Load the payload into a dictionary object
-        payloadDictionary = json.loads(payload)
+        dictPayload = json.loads(payload)
 
-        for key in payloadDictionary["state"].keys():
+        for key in dictPayload["state"].keys():
             print("state keys: " + key)
 
-        if ("redlight" in payloadDictionary["state"]):
-            if (payloadDictionary["state"]["redlight"] == "on"):
+        # determine which keys are present in the device shadow delta
+        # for example, if the state of 'redlght' did not change, it will not be in the
+        # shadow delta and thus not present in the dictPayload object
+        # take action on the keys that are present in dictPayload
+        if ("redlight" in dictPayload["state"]):
+            if (dictPayload["state"]["redlight"] == "on"):
                 sys.stdout.write("*** Turn on the red light... ")
                 os.system('python redLedOn.py')
                 print("done.")
-            if (payloadDictionary["state"]["redlight"] == "off"):
+            if (dictPayload["state"]["redlight"] == "off"):
                 sys.stdout.write("*** Turn off the red light... ")
                 os.system('python redLedOff.py')
                 print("done.")
 
-        if ("greenlight" in payloadDictionary["state"]):
-            if (payloadDictionary["state"]["greenlight"] == "on"):
+        if ("greenlight" in dictPayload["state"]):
+            if (dictPayload["state"]["greenlight"] == "on"):
                 sys.stdout.write("*** Turn on the green light... ")
                 os.system('python greenLedOn.py')
                 print("done.")
-            if (payloadDictionary["state"]["greenlight"] == "off"):
+            if (dictPayload["state"]["greenlight"] == "off"):
                 sys.stdout.write("*** Turn off the green light... ")
                 os.system('python greenLedOff.py')
                 print("done.")
 
-        deltaMessage = json.dumps(payloadDictionary["state"])
+        deltaMessage = json.dumps(dictPayload["state"])
 
         print("delta message: " + deltaMessage)
         sys.stdout.write("Request to update the reported state... ")

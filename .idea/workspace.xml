@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b55d81b-54be-4bd0-a3be-61131b06cc2c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rpi3-lightexample.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThingShadowEcho.py" afterPath="$PROJECT_DIR$/ThingShadowEcho.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/greenLedOff.py" afterPath="$PROJECT_DIR$/greenLedOff.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/greenLedOn.py" afterPath="$PROJECT_DIR$/greenLedOn.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/redLedOff.py" afterPath="$PROJECT_DIR$/redLedOff.py" />
@@ -19,11 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ThingShadowEcho.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ThingShadowEcho.py">
+      <file leaf-file-name="rpi3-lightexample.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rpi3-lightexample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="24" column="2" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="24" selection-end-column="2" />
+            <state relative-caret-position="539">
+              <caret line="108" column="6" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="startRpi3-lightexample.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/startRpi3-lightexample.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,6 +54,8 @@
         <option value="$PROJECT_DIR$/startBaicPubSub.sh" />
         <option value="$PROJECT_DIR$/startThingShadowEcho.sh" />
         <option value="$PROJECT_DIR$/ThingShadowEcho.py" />
+        <option value="$PROJECT_DIR$/startRpi3-lightexample.sh" />
+        <option value="$PROJECT_DIR$/rpi3-lightexample.py" />
       </list>
     </option>
   </component>
@@ -236,8 +250,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ThingShadowEcho.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="24" column="2" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="24" selection-end-column="2" />
+        <state relative-caret-position="159">
+          <caret line="56" column="8" lean-forward="false" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startRpi3-lightexample.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rpi3-lightexample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="108" column="6" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="6" />
           <folding />
         </state>
       </provider>
